@@ -1,5 +1,5 @@
+<h2 align=center> Media.io - Made with Angular </h2>
 <p align="center">
-<h3> Media.io - Made with Angular </h3>
 </p>
 
 <p align="center">
@@ -7,6 +7,20 @@ What if youtube was designed to be used as music player?
 Media.io is a media player based on youtube, providing a beautiful User experience as a Music Player in watching Youtube videos. Made with Angular 8 & Bootstrap
 It can be regarded as the Media Player experience for youtube listening pleasure.
 </p>
+
+# Demo
+
+    ## 1
+
+![](gif/Demo1.gif)
+
+    ## 2
+
+![](gif/Demo2.gif)
+
+    ## 3
+
+![](gif/Demo3.gif)
 
 # Made Using
 
