@@ -24,7 +24,7 @@ It can be regarded as the Media Player experience for youtube listening pleasure
 
 # Made Using
 
-- [ngrx/store] State Management with [Redux](https://github.com/reactjs/redux) based on RxJs
+- [ngrx/store](https://github.com/ngrx/store) State Management with [Redux](https://github.com/reactjs/redux) based on RxJs
 - [ngrx/effects](https://github.com/ngrx/platform/blob/master/docs/effects/README.md) - Side Effects layer for ngrx/store
 - [ngrx/router-store](https://github.com/ngrx/platform/blob/master/docs/router-store/README.md) - Bindings to connect the Angular Router to @ngrx/store~
 - [ngrx-store-localstorage](https://github.com/btroncone/ngrx-store-localstorage) - local storage support for ngrx/store
