@@ -1,0 +1,197 @@
+@import '../echoes-variables.scss';
+/* applying a nicer UX*/
+.nicer-ux *,
+.ux-maker {
+  transition: all 0.3s ease-out;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 3d flip
+.card .face {
+  backface-visibility: hidden;
+  transition: all 0.8s ease;
+}
+
+.card .front {
+  transform: perspective(400px) rotateY(0deg);
+  backface-visibility: visible;
+}
+
+.card .back {
+  transform: perspective(400px) rotateY(-179.9deg);
+  opacity: 0;
+}
+
+.show-description .face.front {
+  transform: perspective(400px) rotateY(179.9deg);
+}
+.show-description .face.back {
+  transform: perspective(400px) rotateY(0deg);
+  opacity: 1;
+}
+input,
+a,
+button,
+select {
+  // removes the blue overlay in chrome android
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  // removes the orange border when on focus
+  outline: none;
+}
+.dropdown .dropdown-toggle {
+  cursor: pointer;
+}
+.btn-transparent {
+  background-color: transparent !important;
+  border-color: transparent;
+  box-shadow: none;
+}
+.bg-primary {
+  background-color: var(--brand-primary) !important;
+}
+.bg-secondary {
+  background-color: var(--brand-secondary) !important;
+}
+.bg-danger {
+  background-color: var(--brand-danger) !important;
+}
+.text-primary {
+  color: var(--brand-primary) !important;
+}
+.text-secondary {
+  color: var(--brand-secondary);
+}
+.text-info {
+  color: var(--brand-info) !important;
+}
+.text-danger {
+  color: var(--brand-danger) !important;
+}
+.label-danger {
+  background-color: var(--brand-danger) !important;
+}
+.label-info {
+  background-color: var(--brand-info) !important;
+}
+.label-success {
+  background-color: var(--brand-success) !important;
+}
+
+// BUTTONS
+.btn-primary {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+.btn-info {
+  background-color: var(--brand-info);
+  border-color: var(--brand-info);
+}
+
+.btn-danger {
+  background-color: var(--brand-danger);
+  border-color: var(--brand-danger);
+}
+
+// FLEX
+.is-strechable {
+  flex-grow: 1;
+}
+.is-flex-row {
+  display: flex;
+  flex-direction: row !important;
+}
+
+.is-flex-column {
+  display: flex;
+  flex-direction: column !important;
+}
+.is-flex-valign {
+  align-items: center;
+}
+.is-flex-wrap {
+  flex-wrap: wrap;
+}
+.is-content-aligned-h {
+  justify-content: center;
+}
+.is-justify-right {
+  justify-content: flex-end;
+}
+@for $size from 1 to 5 {
+  .is-flex-#{$size} {
+    flex: $size;
+  }
+}
+// border-radius
+.is-rounded-top {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border: 0px solid;
+}
+
+.is-rounded-bottom {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border: 0px solid;
+}
+.is-rounded {
+  @extend .is-rounded-top;
+  @extend .is-rounded-bottom;
+}
+
+.is-aligned-vh {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+// font-size
+.text-md {
+  font-size: 2rem !important;
+}
+
+// layout utils
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margins {
+  margin: 0 !important;
+}
+
+.is-media-valign {
+  vertical-align: middle !important;
+}
+
+.is-absolute {
+  position: absolute !important;
+}
+
+.is-absolute-bottom {
+  @extend .is-absolute;
+  bottom: 0;
+}
+.is-absolute-top {
+  @extend .is-absolute;
+  top: 0;
+}
+.is-absolute-right {
+  @extend .is-absolute;
+  right: 0;
+}
+.is-absolute-left {
+  @extend .is-absolute;
+  left: 0;
+}
+.is-sticky {
+  position: sticky;
+  top: 0;
+}
+.is-fixed {
+  position: fixed;
+}
