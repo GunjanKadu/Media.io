@@ -1,0 +1,157 @@
+@import '~css/echoes-variables.scss';
+
+@media (min-width: 320px) {
+  :host {
+    --track-badge-color: var(--brand-dark-bg-color);
+    --text-color: var(--brand-inverse-text);
+    --track-active-border-color: var(--brand-primary);
+    --track-bg-active-color: var(--brand-dark-bg-color-transparent);
+
+    $track-badge-index: 10;
+    $track-button: 15;
+    $track-border-color: #262829;
+    $remove-font-size: 2rem;
+    $playlist-font-size: 2rem;
+
+    .now-playlist-track__trigger {
+      text-shadow: none;
+      padding: 1.5rem;
+      border-radius: 7px;
+      background-color: var(--sidebar-bg-secondary);
+      position: relative;
+
+      .track-contents {
+        display: flex;
+        flex-direction: row;
+        height: 65px;
+      }
+
+      .active & {
+        color: var(--text-color);
+        border-right: 6px solid var(--track-active-border-color);
+        background: var(--track-bg-active-color);
+        margin: 0;
+        border-radius: 0;
+      }
+    }
+
+    .track-number {
+      position: absolute;
+      left: 1.5rem;
+      padding: 0.5rem;
+      background-color: rgba(0, 0, 0, 0.9);
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--sidebar-text-lighter);
+    }
+
+    .track-actions {
+      position: absolute;
+      top: 7rem;
+      right: 0;
+    }
+
+    .track-info {
+      max-height: 400px;
+      overflow: auto;
+      color: var(--sidebar-text-lighter);
+      margin-top: 2rem;
+    }
+
+    .playlist-track {
+      font-size: $playlist-font-size;
+      display: inline-block;
+    }
+
+    .video-title {
+      overflow: hidden;
+      max-height: 6rem;
+      min-height: 6.5rem;
+      min-width: 195px;
+      transition: transform 300ms ease-out 200ms;
+      transform: translateY(0);
+      width: 100%;
+      padding: 0 1rem;
+      color: var(--sidebar-text-lighter);
+    }
+
+    .video-thumb {
+      height: 4.8rem;
+      width: 6.4rem;
+
+      .video-thumb__image {
+        height: 100%;
+      }
+    }
+
+    .remove-track {
+      position: absolute;
+      top: 1rem;
+      right: 0rem;
+      // display: block;
+      z-index: $track-button;
+      font-size: $remove-font-size;
+      transform: translatex(-1rem);
+    }
+
+    .badge-info {
+      border-radius: 0;
+      background: var(--track-badge-color);
+      margin: 0 auto;
+      display: block;
+      font-size: 1rem;
+      margin-top: 0;
+      z-index: $track-badge-index;
+      position: relative;
+    }
+
+    .track-tracks {
+      margin: 1.5rem -1.5rem 0;
+      border-top: 1px solid var(--track-active-border-color);
+
+      .album-tracks-heading {
+        margin: 0 2rem;
+        color: var(--track-active-border-color);
+        font-size: 1.5rem;
+      }
+
+      .list-group-item {
+        border: none;
+        color: var(--text-color);
+
+        &:hover {
+          color: var(--track-active-border-color);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  :host {
+    .remove-track {
+      transform: translatex(5rem);
+    }
+    &:hover {
+      .remove-track {
+        transform: translatex(0rem);
+      }
+    }
+
+    .track-actions {
+      .closed & {
+        transform: translateX(20px);
+      }
+    }
+    .track-info {
+      .closed & {
+        display: none;
+      }
+    }
+    .track-tracks {
+      .btn {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
