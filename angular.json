@@ -78,12 +78,14 @@
             }
           }
         },
+
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "echoes-player:build"
           }
         },
+
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -127,6 +129,7 @@
       }
     }
   },
+
   "defaultProject": "echoes-player",
   "schematics": {
     "@schematics/angular:component": {

@@ -45,7 +45,3 @@ npm-debug.log
 # Doc #
 /doc/
 
-# IDE #
-.idea/
-*.swp
-*.tag*
