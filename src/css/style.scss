@@ -1,0 +1,56 @@
+/* Application */
+@import './echoes-variables';
+// @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import './bootstrap-custom';
+@import './core/global';
+@import './core/utils';
+@import './core/animations';
+@import './core/responsive';
+
+// $fa-font-path: '../fonts' !default;
+// @import '~font-awesome/scss/font-awesome';
+
+// Themes
+@import './app.variables';
+@import './themes/index.themes.scss';
+
+body,
+html {
+  height: 100%;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+}
+
+iframe {
+  border: none;
+}
+// ngx-tooltip Style <START>
+tooltip-content .tooltip .tooltip-inner {
+  box-shadow: 0 0 20px -3px var(--brand-dark-bg-color);
+  padding: 1rem;
+  color: var(--brand-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-wrap;
+}
+
+// -list group item
+.list-group-item,
+button.list-group-item,
+a.list-group-item {
+  background-color: var(--list-group-item-bg);
+  border-color: var(--list-group-item-border);
+  color: var(--list-group-item-text);
+
+  &:hover {
+    background-color: var(--list-group-item-bg-hover);
+    color: var(--list-group-item-text-hover);
+  }
+}
