@@ -1,0 +1,26 @@
+@import '~css/core/global.scss';
+
+@media (min-width: 320px) {
+  $box-size: 25rem;
+  $content-size: 15rem;
+
+  :host {
+    section {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 1032;
+      box-shadow: var(--app-lite-shadow);
+      padding: 1rem;
+      min-width: $box-size;
+      max-width: $box-size;
+    }
+
+    article {
+      width: 100%;
+      max-height: $content-size;
+      overflow: auto;
+      word-break: break-word;
+    }
+  }
+}
